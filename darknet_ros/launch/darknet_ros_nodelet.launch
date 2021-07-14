@@ -20,7 +20,7 @@
   <node name="darknet_ros_nodelet_manager" type="nodelet" pkg="nodelet" args="manager" output="screen"/>
 
   <!-- Start darknet and ros wrapper -->
-  <node pkg="nodelet" type="nodelet" name="darknet_ros_nodelet" output="screen" launch-prefix="$(arg launch_prefix)" args="load darknet_ros_nodelet darknet_ros_nodelet_manager">
+  <node pkg="nodelet" type="nodelet" name="darknet_ros_nodelet" output="screen" launch-prefix="$(arg launch_prefix)" args="load darknet_ros/DarknetRosNodelet darknet_ros_nodelet_manager">
     <param name="weights_path"          value="$(arg yolo_weights_path)" />
     <param name="config_path"           value="$(arg yolo_config_path)" />
   </node>
